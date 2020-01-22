@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorBottomPlayer"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/sizeBottomPlayer"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewRadioIcon"
+        android:layout_width="@dimen/sizeBottomPlayerIcon"
+        android:layout_height="@dimen/sizeBottomPlayerIcon"
+        android:layout_centerVertical="true"
+        android:padding="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@+id/imageViewFavorite"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imageViewRadioIcon"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textviewRadioTitle"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            tools:text="Radio Name"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textColor="@color/colorWhite"
+            android:id="@+id/textviewRadioStatus"
+            tools:text="Playing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        app:srcCompat="@drawable/ic_pause_24px"
+        android:layout_alignParentRight="true"
+        android:padding="16dp"
+        android:tint="@color/colorWhite"
+        android:id="@+id/imageViewPlayPauseControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        app:srcCompat="@drawable/ic_favorite_24px"
+        android:padding="16dp"
+        android:tint="@color/colorRed"
+        android:layout_toLeftOf="@+id/imageViewPlayPauseControl"
+        android:id="@+id/imageViewFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+
+</RelativeLayout>
